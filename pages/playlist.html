@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Playlist</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/corazon.png" type="image/png">
+
+    <!-- Tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/styles/playlist.css">
+
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="header"></div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Películas</h2>
+            <ul>
+                <li onclick="cargarCancion('cars')">1. Cars</li>
+                <li onclick="cargarCancion('toy')">2. Toy Story</li>
+                <li onclick="cargarCancion('hannah')">3. Hannah Montana: La Película</li>
+                <li onclick="cargarCancion('gemelas')">4. Juego de Gemelas</li>
+                <li onclick="cargarCancion('rey')">5. El Rey León</li>
+                <li onclick="cargarCancion('intensa')">6. Intensamente</li>
+                <li onclick="cargarCancion('nemo')">7. Buscando a Nemo</li>
+                <li onclick="cargarCancion('frozen')">8. Frozen</li>
+                <li onclick="cargarCancion('tinker')">9. Tinkerbell</li>
+                <li onclick="cargarCancion('rata')">10. Ratatouille</li>
+                <li onclick="cargarCancion('up')">11. Up</li>
+                <li onclick="cargarCancion('locos')">12. Un Viernes de Locos</li>
+            </ul>
+        </aside>
+
+        <main class="contenido" id="contenido">
+            <h1>Películas que nos marcaron el corazón 💖🎬</h1>
+            <p>Un recorrido por historias que nos hicieron reír, llorar y cantar a los gritos. Si las viste, las amás. Y si no... ¿qué estás esperando?</p>
+            <img src="/img/collage de pelis.jpg" alt="Playlist" class="playlist-image">
+        </main>
+    </div>
+
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <script>
+        // Cargar header
+        fetch("/components/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+    
+                // Marcar automáticamente la opción activa del nav
+                const currentPage = window.location.pathname.split("/").pop();
+                document.querySelectorAll("nav a").forEach(link => {
+                    if (link.getAttribute("href").includes(currentPage)) {
+                        link.classList.add("activo");
+                    }
+                });
+            });
+    
+        // Cargar footer
+        fetch("/components/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+    <script>
+        function cargarCancion(codigo) {
+            const canciones = {
+                cars: {
+                    titulo: "Cars - La vida no es solo llegar primero.",
+                    descripcion: "Relámpago McQueen aprende que la meta no lo es todo. <br> 🎓 La enseñanza: no siempre ganar es lo más importante.",
+                    video: "https://www.youtube.com/embed/MKeUsy-d3_k"
+                },
+                toy: {
+                    titulo: "Toy Story - La amistad no tiene fecha de vencimiento.",
+                    descripcion: "Juguetes con emociones reales y amistades eternas. <br>🎓 La enseñanza: crecer duele, pero no estás solo.",
+                    video: "https://www.youtube.com/embed/VhCDgv4x_pU"
+                },
+                hannah: {
+                    titulo: "Hannah Montana: La Película - La mejor de dos mundos... y una canción que te parte.",
+                    descripcion: "Miley descubre quién es cuando deja todo el show.<br>🎓 La enseñanza: volver a tus raíces te reconecta.",
+                    video: "https://www.youtube.com/embed/n3XwL084F1s"
+                },
+                gemelas: {
+                    titulo: "Juego de Gemelas - Un plan maestro con dos versiones de vos misma.",
+                    descripcion: "Dos hermanas separadas al nacer se reencuentran y lo cambian todo.<br>🎓 La enseñanza: la familia puede encontrarse en los lugares más inesperados.",
+                    video: "https://www.youtube.com/embed/vt_lEZM2ZmQ"
+                },
+                rey: {
+                    titulo: "El Rey León - El clásico que nos hizo cantar, llorar y crecer.",
+                    descripcion: "Simba debe enfrentar su pasado para convertirse en quien es.<br>🎓 La enseñanza: no podés huir de quién sos.",
+                    video: "https://www.youtube.com/embed/mb79ctR-E-c"
+                },
+                intensa: {
+                    titulo: "Intensamente - La vida es un viaje lleno de emociones.",
+                    descripcion: "Las emociones guían la vida de Riley desde adentro.<br>🎓 La enseñanza: sentirse triste también está bien.",
+                    video: "https://www.youtube.com/embed/_DTnvFdFW14"
+                },
+                nemo:{
+                    titulo: "Buscando a Nemo - Un mar de emociones... y una olvidadiza inolvidable.",
+                    descripcion: "Un padre sobreprotector cruza el océano por su hijo.<br>🎓 La enseñanza: confiar también es parte de amar.",
+                    video: "https://www.youtube.com/embed/ABDiB48VPJc"
+                },
+                frozen: {
+                    titulo: "Frozen - El hielo se derrite, pero los himnos quedan.",
+                    descripcion: "Elsa aprende a aceptarse y dejar que su magia brille.<br>🎓 La enseñanza: ser quien sos es tu mayor poder.",
+                    video: "https://www.youtube.com/embed/QTvcYow0Z5U"
+                },
+                tinker: {
+                    titulo: "Tinkerbell - Cuando las hadas también necesitan encontrarse.",
+                    descripcion: "Campanita busca su lugar entre las demás hadas.<br>🎓 La enseñanza: todas tenemos algo único para aportar.",
+                    video: "https://www.youtube.com/embed/SNfOPaFOuqY"
+                },
+                rata:{
+                    titulo: "Ratatouille - No importa quién seas, si tenés buen gusto.",
+                    descripcion: "Un ratón que sueña con cocinar y lo logra.<br>🎓 La enseñanza: tu origen no define lo que podés lograr.",
+                    video: "https://www.youtube.com/embed/bZ6rgkdDxV0"
+                },
+                up: {
+                    titulo: "Up - El amor es una aventura, incluso si no vas tan lejos.",
+                    descripcion: "Una aventura inesperada después de una gran pérdida.<br>🎓 La enseñanza: nunca es tarde para vivir nuevas historias.",
+                    video: "https://www.youtube.com/embed/qoZo9MiICo0"
+                },
+                locos:{
+                    titulo: "Un viernes de locos - Un cambio de cuerpo, muchas verdades.",
+                    descripcion: "Mamá e hija intercambian cuerpos y se entienden por fin.<br>🎓 La enseñanza: ponerse en el lugar del otro cambia todo.",
+                    video: "https://www.youtube.com/embed/z1_pDPoXuxY"
+                    // video: "https://www.youtube.com/embed/v80uh3NCOXo" QUIERO USAR ESTE PERO NO FUNCIONA LA PORTADA Y SE VE MAL
+                }
+            };
+
+            const cancion = canciones[codigo];
+
+            document.getElementById("contenido").innerHTML = `
+                <h1>${cancion.titulo}</h1>
+                <p>${cancion.descripcion}</p>
+                <iframe width="560" height="315" src="${cancion.video}" frameborder="0" allowfullscreen></iframe>
+            `;
+
+            // Remover clase 'activo' de todos los <li>
+            const items = document.querySelectorAll('.sidebar li');
+            items.forEach(item => item.classList.remove('activo'));
+
+            // Agregar clase 'activo' al <li> que fue clickeado
+            const index = Object.keys(canciones).indexOf(codigo);
+            items[index].classList.add('activo');
+        }
+    </script>
+</body>
+
+</html>

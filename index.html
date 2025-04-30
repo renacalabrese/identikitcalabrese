@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identikit - Calabrese</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/corazon.png" type="image/png">
+
+    <!-- Tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div id="header"></div>
+
+    <main>
+        <p>Juego al hockey desde los 6 años y siempre busco aprender algo nuevo. Me gusta desafiarme, salir de la rutina y seguir creciendo un poquito cada día.</p>
+        <p style="margin-top: 0%;">A continuación, te muestro algunas fotos de cosas que me gustan y me hacen feliz.</p>
+
+        <div class="galeria-fotos">
+            <img src="/img/Fotos del Inicio/familia.jpg"  class="foto-galeria" alt="Foto de mi familia" width="400">
+            <img src="/img/Fotos del Inicio/hockey.jpg" alt="Foto Hockey" class="foto-galeria">
+            <img src="/img/Fotos del Inicio/chicas.jpg" alt="Foto Chicas" class="foto-galeria">
+            <img src="/img/Fotos del Inicio/abuelosP.jpg" alt="Foto Abuelos Papa" class="foto-galeria">
+            <img src="/img/Fotos del Inicio/madrin.jpg" alt="Foto Madrin" class="foto-galeria">
+            <img src="/img/Fotos del Inicio/nunu.jpeg" alt="Foto Nunu" class="foto-galeria">
+        </div>
+        <div class="galeria-fotos">
+            <img src="/img/Fotos del Inicio/orne.jpg"  class="foto-galeria" alt="Foto Orne" width="400">
+            <img src="/img/Fotos del Inicio/facu.jpg" alt="Foto Facu" class="foto-galeria">
+            <img src="/img/Fotos del Inicio/abuelosM.jpg" alt="Foto Abuelos Mama" class="foto-galeria">
+            <img src="/img/Fotos del Inicio/yo.jpg" alt="Foto Yo" class="foto-galeria">
+            <img src="/img/Fotos del Inicio/equipoHockey.jpg" alt="Foto Hockey Equipo" class="foto-galeria">
+            <img src="/img/Fotos del Inicio/pose.jpg" alt="Foto Pose" class="foto-galeria">
+        </div>
+
+        <blockquote> "El éxito es la suma de pequeños esfuerzos repetidos día tras día."</blockquote>
+
+        <p class="subtitulo">Tres páginas que me interesan:</p>
+        <div class="tarjetas-container">
+            <a href="https://www.clubbancoprovincia.com.ar/" class="tarjeta tarjeta-banco">
+                <img src="img/Pag. Interesantes/banco.png" alt="Banco Provincia">
+                <div class="overlay">Banco Provincia</div>
+            </a>
+            <a href="https://www.cafevoce.com.ar" class="tarjeta tarjeta-cafe">
+                <img src="img/Pag. Interesantes/coffee.png" alt="Café Voce">
+                <div class="overlay">Café Voce</div>
+            </a>
+            <a href="/pages/collage.html" class="tarjeta tarjeta-camara">
+                <img src="img/Pag. Interesantes/Camera.png" alt="Cámara" class="img-camara">
+                <div class="overlay">Collage</div>
+            </a>
+        </div>        
+        
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <!-- SCRIPTS, lo google porque no sabia como era-->
+    <script>
+        // Cargar header
+        fetch("/components/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+    
+                // Marcar automáticamente la opción activa del nav
+                const currentPage = window.location.pathname.split("/").pop();
+                document.querySelectorAll("nav a").forEach(link => {
+                    if (link.getAttribute("href").includes(currentPage)) {
+                        link.classList.add("activo");
+                    }
+                });
+            });
+    
+        // Cargar footer
+        fetch("/components/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+    
+
+</body>
+</html>

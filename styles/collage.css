@@ -1,0 +1,66 @@
+/* Aplica a todo el documento */
+body {
+    margin: 0;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+/* Fondo y estilo general del main */
+.main-collage {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+/* Título */
+.main-collage h2 {
+    color: rgb(200, 150, 200);;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 0%;
+}
+
+/* Imagen del collage */
+.collage-img {
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background-color: rgb(200, 150, 200);
+}
+
+@media (max-width: 768px) {
+    body, main {
+        padding: 1rem !important;
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .foto-galeria,
+    .galeria-fotos img,
+    .tarjeta,
+    .tarjeta img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .galeria-fotos,
+    .tarjetas-container {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+    }
+}

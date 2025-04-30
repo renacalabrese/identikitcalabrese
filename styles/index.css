@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Kodchasan', sans-serif;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+h1 {
+    background-color: rgb(156, 78, 156);
+    color: white;
+    margin: 0;
+    padding: 1rem;
+}
+
+.galeria-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1rem;
+}
+
+.foto-galeria {
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    width: 200px;
+    height: 200px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.foto-galeria:hover {
+    transform: scale(1.03);
+}
+
+
+blockquote{
+    color: rgb(156, 78, 156);
+    font-style: italic;
+    font-family: 'Kodchasan', sans-serif;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.subtitulo {
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+
+/* Tarjetas con imagen y overlay */
+.tarjetas-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    padding: 10px;
+}
+
+.img-camara{
+    width: 75% !important; /* el IMPORTANT es para que lo haga si o si, te asegura que se aplique por encima de la genérica .tarjeta img*/
+    height: 75% !important;
+    object-fit: contain !important; 
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0; /* clave para que empiece desde abajo */
+    left: 0;
+    width: 100%;
+    height: 15%; /* solo pinta menos de la mitad */
+    background: rgba(156, 78, 156, 0.8);
+    color: white;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+}
+
+
+.tarjeta:hover .overlay {
+    opacity: 1;
+}
+
+/* Cada tarjeta */
+.tarjeta-banco {
+    width: 150px;
+    height: 150px;
+}
+
+.tarjeta-cafe {
+    width: 150px;
+    height: 150px;
+}
+
+.tarjeta-camara {
+    width: 150px;
+    height: 150px;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .foto-galeria {
+        width: 100%;
+        height: auto;
+    }
+
+    .galeria-fotos {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .tarjetas-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .tarjeta {
+        width: 90%;
+        height: auto;
+    }
+
+    .tarjeta img {
+        height: auto;
+        object-fit: contain;
+    }
+
+    blockquote {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}

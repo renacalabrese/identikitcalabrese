@@ -1,0 +1,99 @@
+main {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+body{
+    /*el ",sans-serif" es por si el sistema no puede cargar la tipografia correspondiente y va a devolver cualquier tipografia de tipo sans-serif*/
+    font-family: 'Kodchasan', sans-serif;
+    text-align: center;
+}
+
+table {
+    border: none;
+    border-spacing: 0;
+    border-collapse: collapse;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+table th, table td {
+    border: 2px solid rgb(200, 150, 200);
+    padding: 8px 10px;
+    vertical-align: top;
+}
+
+table th {
+    background-color: #fce4ec; /* rosa clarito */
+    color: #880e4f;
+    font-size: 1rem;
+}
+
+.coca-cola {
+    font-family: 'Pacifico', cursive;
+    color: #e53935; /* rojo coca */
+    font-size: 1rem;
+}
+
+
+p {
+    margin-bottom: 1%;
+}
+
+
+/* Le dice que los elementos "td" e "img" DENTRO de "table"
+tengan un ancho máximo de 250px, podes ajustarlo de acá.*/
+table td img {
+    display: block;
+    margin: auto;
+}
+
+table td {
+    vertical-align: middle;
+}
+
+/* Le saqué el margin de 1px para mantener la consistencia */
+body {
+    margin: 0px;
+}
+
+@media (max-width: 768px) {
+    body, main {
+        padding: 1rem !important;
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .foto-galeria,
+    .galeria-fotos img,
+    .tarjeta,
+    .tarjeta img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .galeria-fotos,
+    .tarjetas-container {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+    }
+}
