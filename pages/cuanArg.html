@@ -49,6 +49,15 @@
         <p>Hecho con 💜 por Renata Calabrese</p>
     </footer> 
 
+    <script>
+        const currentPage = window.location.pathname.split("/").pop();
+    
+        const linkToActivate = document.querySelector(`nav a[href$="${currentPage}"]`);
+        if (linkToActivate) {
+            linkToActivate.classList.add("activo");
+        }
+    </script>
+    
     <!--
     <script>
         // Cargar header
