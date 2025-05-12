@@ -51,6 +51,27 @@ nav a.activo {
     color: white;
 }
 
+/* Botón hamburguesa */
+.hamburguesa {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+/* Menú lateral oculto */
+#menu-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+}
 
 @media (max-width: 768px) {
     body, main {
@@ -87,6 +108,39 @@ nav a.activo {
         display: block;
         overflow-x: auto;
         width: 100%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hamburguesa {
+        display: block;
+    }
+
+    #menu-mobile {
+        flex-direction: column;
+        background-color: rgb(200, 150, 200);
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 200px;
+        padding: 2rem 1rem;
+        transform: translateX(100%);
+        z-index: 1000;
+    }
+
+    #menu-mobile a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 1rem 0;
+        font-size: 18px;
+    }
+
+    #menu-mobile.mostrar {
+        transform: translateX(0%);
     }
 }
 

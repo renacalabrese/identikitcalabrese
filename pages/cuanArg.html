@@ -24,7 +24,11 @@
         <h1>Renata Calabrese</h1>    
         <div class="linea"></div>
     
-        <nav>
+        <!-- Botón hamburguesa -->
+        <button class="hamburguesa" onclick="toggleMenu()">☰</button>
+
+        <!-- Menú -->
+        <nav id="menu-mobile">
             <a href="../index.html">Inicio</a>
             <a href="./pixelArt.html">Fruta Favorita</a>
             <a href="./table.html">Bebida Favorita</a>
@@ -58,6 +62,11 @@
         }
     </script>
     
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu-mobile").classList.toggle("mostrar");
+        }
+    </script>
     <!--
     <script>
         // Cargar header

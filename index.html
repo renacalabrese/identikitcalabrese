@@ -26,7 +26,11 @@
         <h1>Renata Calabrese</h1>    
         <div class="linea"></div>
     
-        <nav>
+        <!-- Botón hamburguesa -->
+        <button class="hamburguesa" onclick="toggleMenu()">☰</button>
+
+        <!-- Menú -->
+        <nav id="menu-mobile">
             <a href="index.html">Inicio</a>
             <a href="pages/pixelArt.html">Fruta Favorita</a>
             <a href="pages/table.html">Bebida Favorita</a>
@@ -89,6 +93,13 @@
             linkToActivate.classList.add("activo");
         }
     </script>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu-mobile").classList.toggle("mostrar");
+        }
+    </script>
+
     
     <!-- SCRIPTS, lo google porque no sabia como era-->
     <!--
