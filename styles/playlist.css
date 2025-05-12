@@ -20,7 +20,6 @@ body {
     object-fit: cover;
 }
 
-
 .sidebar {
     background-color: #fcd6e1;
     width: 300px;
@@ -34,12 +33,27 @@ body {
     margin-bottom: 1rem;
 }
 
-.sidebar h2 {
-    font-size: 1.3rem;
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
     color: #880e4f;
-    margin-bottom: 1.5rem;
-    text-align: center;
+    display: none; /* oculto por defecto */
 }
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
 
 .sidebar ul {
     list-style: none;
@@ -75,25 +89,51 @@ body {
 }
 
 @media (max-width: 768px) {
-    .container-playlist {
+    .menu-toggle {
+        font-size: 1.4rem;
+        display: block; /* visible solo en mobile */
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #880e4f;
+    }
+
+    .container {
         flex-direction: column;
         align-items: center;
+        padding: 1rem;
         gap: 1.5rem;
     }
 
-    .peliculas {
-        width: 90% !important;
-    }
-
     .sidebar {
-        width: 90% !important;
-        margin-top: 1rem;
-        font-size: 1rem;
-        text-align: center;
+        width: 90%;
+        margin: auto;
+        padding: 1rem;
+        box-sizing: border-box;
+        text-align: left;
     }
 
-    body, main {
+    .sidebar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fcd6e1;
+        border-radius: 2rem;
+        padding: 0.5rem 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .sidebar-header h2 {
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+    .contenido {
+        width: 100%;
         padding: 1rem;
+    }
+
+    body {
         overflow-x: hidden;
     }
 
@@ -101,4 +141,15 @@ body {
         max-width: 100%;
         height: auto;
     }
+
+    .peliculas-lista {
+        display: none;
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+
+    .peliculas-lista.mostrar {
+        display: flex;
+    }
 }
+

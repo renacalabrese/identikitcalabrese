@@ -35,8 +35,11 @@
 
     <div class="container">
         <aside class="sidebar">
-            <h2>Películas</h2>
-            <ul>
+            <div class="sidebar-header">
+                <h2>Películas</h2>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+            <ul class="peliculas-lista">
                 <li onclick="cargarCancion('cars')">1. Cars</li>
                 <li onclick="cargarCancion('toy')">2. Toy Story</li>
                 <li onclick="cargarCancion('hannah')">3. Hannah Montana: La Película</li>
@@ -74,6 +77,23 @@
         }
     </script>
     
+    <script>
+        function toggleMenu() {
+            const lista = document.querySelector('.peliculas-lista');
+            lista.classList.toggle('mostrar');
+        }
+
+        // Cerrar el menú automáticamente al tocar una opción (solo en móvil)
+        document.querySelectorAll('.peliculas-lista li').forEach(item => {
+            item.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                document.querySelector('.peliculas-lista').classList.remove('mostrar');
+            }
+            });
+        });
+    </script>
+
+
     <!--
     <script>
         // Cargar header
