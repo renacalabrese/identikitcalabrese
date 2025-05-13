@@ -7,6 +7,11 @@
     text-align: center;
 }
 
+.pixel-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
 .pixel-art {
     border-collapse: collapse;
     margin: 2rem auto;
@@ -36,11 +41,17 @@
 .verdeOsc { background-color: #558b2f; }
 
 @media (max-width: 768px) {
-    .pixel-art {
-        transform: scale(0.9);  /* hace que la tabla entre visualmente en pantalla */
-        transform-origin: top center;
-        max-width: 100%;
+    .pixel-wrapper {
         overflow-x: auto;
+        max-width: 100%;
+        padding: 0 1rem; /* opcional: margen interno */
+    }
+
+    .pixel-art {
+        transform: none; /* ✳️ quitamos scale para evitar deformación */
+        width: max-content; /* ✔️ mantiene el tamaño real de la tabla */
+        margin: 0 auto;
+        border-collapse: collapse;
     }
 
     .pixel-art td {
