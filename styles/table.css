@@ -91,9 +91,8 @@ body {
         padding: 0 1rem;
     }
 
-    table {
-        display: block;
-        overflow-x: auto;
-        width: 100%;
-    }
+    table:not(.pixel-art) {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
 }

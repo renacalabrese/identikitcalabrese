@@ -64,11 +64,10 @@ body {
         padding: 0 1rem;
     }
 
-    table {
-        display: inline-block; /* mantiene proporción */
+    table.pixel-art {
+        display: inline-block;
+        width: auto;
+        max-width: 90vw;
         overflow-x: auto;
-        width: auto; /* no forzar a 100% */
-        max-width: 90vw; /* opcional: evita que se pase */
     }
-
 }
