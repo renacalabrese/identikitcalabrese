@@ -92,7 +92,8 @@ body {
     }
 
     table:not(.pixel-art) {
-    display: block;
-    overflow-x: auto;
-    width: 100%;
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+    }
 }
