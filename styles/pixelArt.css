@@ -1,4 +1,4 @@
-body {
+.pixel-art-body {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -14,6 +14,8 @@ body {
     box-shadow: 0 4px 10px rgb(188, 115, 188);
     border-radius: 16px;
     overflow: hidden;
+    width: auto; /* clave */
+    display: inline-block; /* mantiene proporción */
 }
 
 .pixel-art td {
@@ -34,40 +36,20 @@ body {
 .verdeOsc { background-color: #558b2f; }
 
 @media (max-width: 768px) {
-    body, main {
-        padding: 1rem !important;
-        overflow-x: hidden;
-    }
-
-    img {
+    .pixel-art {
+        transform: scale(0.9);  /* hace que la tabla entre visualmente en pantalla */
+        transform-origin: top center;
         max-width: 100%;
-        height: auto;
+        overflow-x: auto;
     }
 
-    .foto-galeria,
-    .galeria-fotos img,
-    .tarjeta,
-    .tarjeta img {
-        width: 100% !important;
-        height: auto !important;
+    .pixel-art td {
+        width: 14px;
+        height: 14px;
     }
 
-    .galeria-fotos,
-    .tarjetas-container {
-        flex-direction: column !important;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    blockquote {
-        font-size: 1rem;
-        padding: 0 1rem;
-    }
-
-    table.pixel-art {
-        display: inline-block;
-        width: auto;
-        max-width: 90vw;
+    main {
+        padding: 1rem;
         overflow-x: auto;
     }
 }

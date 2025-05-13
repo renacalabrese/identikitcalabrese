@@ -25,7 +25,7 @@
         <div class="linea"></div>
     
         <!-- Botón hamburguesa -->
-        <button class="hamburguesa" onclick="toggleMenu()">☰</button>
+        <button id="toggle-header-menu" class="hamburguesa" onclick="toggleHeaderMenu()">☰</button>
 
         <!-- Menú -->
         <nav id="menu-mobile">
@@ -41,7 +41,7 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h2>Películas</h2>
-                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <button id="toggle-sidebar-menu" class="menu-toggle" onclick="toggleSidebarMenu()">☰</button>
             </div>
             <ul class="peliculas-lista">
                 <li onclick="cargarCancion('cars')">1. Cars</li>
@@ -82,7 +82,7 @@
     </script>
     
     <script>
-        function toggleMenu() {
+        function toggleSidebarMenu() {
             const lista = document.querySelector('.peliculas-lista');
             lista.classList.toggle('mostrar');
         }
@@ -98,7 +98,7 @@
     </script>
 
     <script>
-        function toggleMenu() {
+        function toggleHeaderMenu() {
             document.getElementById("menu-mobile").classList.toggle("mostrar");
         }
     </script>

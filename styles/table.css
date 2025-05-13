@@ -1,16 +1,18 @@
+body {
+    /* Le saqué el margin de 1px para mantener la consistencia */
+    margin: 0;
+    /*el ",sans-serif" es por si el sistema no puede cargar la tipografia correspondiente y va a devolver cualquier tipografia de tipo sans-serif*/
+    font-family: 'Kodchasan', sans-serif;
+    text-align: center;
+}
+
 main {
     display: flex;
     justify-content: center;
     padding: 1.5rem;
 }
 
-body{
-    /*el ",sans-serif" es por si el sistema no puede cargar la tipografia correspondiente y va a devolver cualquier tipografia de tipo sans-serif*/
-    font-family: 'Kodchasan', sans-serif;
-    text-align: center;
-}
-
-table {
+.tabla-bebida {
     border: none;
     border-spacing: 0;
     border-collapse: collapse;
@@ -18,82 +20,60 @@ table {
     background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
+    max-width: 100%;
 }
 
-table th, table td {
+.tabla-bebida th,
+.tabla-bebida td {
     border: 2px solid rgb(200, 150, 200);
     padding: 8px 10px;
     vertical-align: top;
 }
 
-table th {
-    background-color: #fce4ec; /* rosa clarito */
+.tabla-bebida th {
+    background-color: #fce4ec;
     color: #880e4f;
     font-size: 1rem;
 }
 
-.coca-cola {
-    font-family: 'Pacifico', cursive;
-    color: #e53935; /* rojo coca */
-    font-size: 1rem;
+/* Le dice que los elementos "td" e "img" DENTRO de "table"
+tengan un ancho máximo de 250px, podes ajustarlo de acá.*/
+.tabla-bebida td img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
 }
 
+.tabla-bebida td {
+    vertical-align: middle;
+}
+
+.coca-cola {
+    font-family: 'Pacifico', cursive;
+    color: #e53935;
+    font-size: 1rem;
+}
 
 p {
     margin-bottom: 1%;
 }
 
-
-/* Le dice que los elementos "td" e "img" DENTRO de "table"
-tengan un ancho máximo de 250px, podes ajustarlo de acá.*/
-table td img {
-    display: block;
-    margin: auto;
-}
-
-table td {
-    vertical-align: middle;
-}
-
-/* Le saqué el margin de 1px para mantener la consistencia */
-body {
-    margin: 0px;
-}
-
+/* ✅ Responsive */
 @media (max-width: 768px) {
-    body, main {
-        padding: 1rem !important;
-        overflow-x: hidden;
+    main {
+        padding: 1rem;
     }
 
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .foto-galeria,
-    .galeria-fotos img,
-    .tarjeta,
-    .tarjeta img {
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    .galeria-fotos,
-    .tarjetas-container {
-        flex-direction: column !important;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    blockquote {
-        font-size: 1rem;
-        padding: 0 1rem;
-    }
-
-    table:not(.pixel-art) {
+    .tabla-bebida {
         display: block;
-        overflow-x: auto;
         width: 100%;
+        overflow-x: auto;
+    }
+
+    .tabla-bebida th,
+    .tabla-bebida td {
+        font-size: 0.9rem;
+        padding: 6px;
     }
 }
