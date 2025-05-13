@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Kodchasan', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     color: #5e2750;
 }
 
@@ -27,7 +27,7 @@ body {
     border-radius: 16px;
     padding: 1.5rem 1rem;
     box-shadow: 0 4px 10px rgb(200, 150, 200);
-    font-family: 'Kodchasan', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     color: #880e4f;
     align-self: flex-start;
     margin-bottom: 1rem;

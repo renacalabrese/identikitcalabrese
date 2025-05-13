@@ -2,7 +2,7 @@ body {
     /* Le saqué el margin de 1px para mantener la consistencia */
     margin: 0;
     /*el ",sans-serif" es por si el sistema no puede cargar la tipografia correspondiente y va a devolver cualquier tipografia de tipo sans-serif*/
-    font-family: 'Kodchasan', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
 }
 

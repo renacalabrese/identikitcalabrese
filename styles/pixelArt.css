@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: 'Kodchasan', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
 }
 
@@ -48,8 +48,8 @@
     }
 
     .pixel-art {
-        transform: none; /* ✳️ quitamos scale para evitar deformación */
-        width: max-content; /* ✔️ mantiene el tamaño real de la tabla */
+        transform: none; 
+        width: max-content;
         margin: 0 auto;
         border-collapse: collapse;
     }
