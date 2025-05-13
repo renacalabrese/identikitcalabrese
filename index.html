@@ -80,7 +80,8 @@
     
     <!-- FOOTER -->
     <footer class="footer-container">
-        <p>Hecho con 💜 por Renata Calabrese</p>
+        <p>© 2025 CALA.</p>
+        <p>Diseñado por Renata.</p>
     </footer>   
 
     <script>
@@ -98,33 +99,6 @@
         function toggleMenu() {
             document.getElementById("menu-mobile").classList.toggle("mostrar");
         }
-    </script>
-
-    
-    <!-- SCRIPTS, lo google porque no sabia como era-->
-    <!--
-    <script>
-        // Cargar header
-        fetch("components/header.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-    
-                // Marcar automáticamente la opción activa del nav
-                const currentPage = window.location.pathname.split("/").pop();
-                document.querySelectorAll("nav a").forEach(link => {
-                    if (link.getAttribute("href").includes(currentPage)) {
-                        link.classList.add("activo");
-                    }
-                });
-            });
-    
-        // Cargar footer
-        fetch("components/footer.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("footer").innerHTML = data);
-    </script>
-    -->
-    
+    </script>    
 </body>
 </html>

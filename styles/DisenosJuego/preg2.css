@@ -7,7 +7,7 @@ body {
 
 .contenido-juego h2{
     text-align: center;
-    color: rgb(188, 115, 188);
+    color: #5c6c5e;
 }
 .opciones {
     display: flex;
@@ -23,8 +23,7 @@ body {
     height: 300px; /* Aumentamos la altura */
     border-radius: 16px;
     overflow: hidden;
-    border: px solid rgb(200, 150, 200);
-    box-shadow: 0 4px 10px rgb(188, 115, 188);
+    box-shadow: 0 4px 10px #5c6c5e82;
     transition: transform 0.3s ease;
     margin-bottom: 50px;
 }
@@ -49,7 +48,7 @@ body {
     width: 100%;
     padding: 8px 0;
     text-align: center;
-    background-color: rgb(200, 150, 200);
+    background-color: #5c6c5e;
     color: #fff;
     font-size: 0.9rem;
     opacity: 0;
@@ -106,5 +105,19 @@ body {
     .opcion {
         width: 25%; /* 3 por fila */
         height: 220px;
+    }
+
+    .tooltip {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 8px 0;
+        text-align: center;
+        background-color: #5c6c5e;
+        color: #fff;
+        font-size: 0.9rem;
+        opacity: 1 !important; /* SIEMPRE visible en mobile */
+        transition: none !important;
     }
 }

@@ -15,14 +15,14 @@ body {
 
 .resultado-container h2 {
     font-size: 2rem;
-    color: #880e4f;
+    color: #5c6c5e;
     margin-bottom: 1.5rem;
 }
 
 .resultado-container p {
     font-size: 1.4rem;
-    color: #4a235a;
-    background-color: #fce4ec;
+    color: #465848;
+    background-color: #b4d6b9;
     padding: 1.2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);

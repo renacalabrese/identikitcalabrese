@@ -25,14 +25,14 @@ main {
 
 .tabla-bebida th,
 .tabla-bebida td {
-    border: 2px solid rgb(200, 150, 200);
+    border: 2px solid #5c6c5e;
     padding: 8px 10px;
     vertical-align: top;
 }
 
 .tabla-bebida th {
-    background-color: #fce4ec;
-    color: #880e4f;
+    background-color: #85ae8b;
+    color: #415243;
     font-size: 1rem;
 }
 
@@ -51,7 +51,7 @@ tengan un ancho máximo de 250px, podes ajustarlo de acá.*/
 
 .coca-cola {
     font-family: 'Pacifico', cursive;
-    color: #e53935;
+    color: #000000;
     font-size: 1rem;
 }
 

@@ -16,13 +16,6 @@ main {
     padding: 2rem;
 }
 
-h1 {
-    background-color: rgb(156, 78, 156);
-    color: white;
-    margin: 0;
-    padding: 1rem;
-}
-
 .galeria-fotos {
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +26,7 @@ h1 {
 
 .foto-galeria {
     border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px #5c6c5e82;
     width: 200px;
     height: 200px;
     transition: transform 0.3s ease;
@@ -45,9 +38,8 @@ h1 {
     transform: scale(1.03);
 }
 
-
 blockquote{
-    color: rgb(156, 78, 156);
+    color: #68906d;
     font-style: italic;
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
@@ -109,7 +101,7 @@ blockquote{
     left: 0;
     width: 100%;
     height: 15%; /* solo pinta menos de la mitad */
-    background: rgba(156, 78, 156, 0.8);
+    background: #5c6c5e;
     color: white;
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
@@ -153,7 +145,7 @@ blockquote{
         height: 45vw;
         object-fit: cover;
         border-radius: 16px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 15px #5c6c5e82;
     }
 
     .tarjetas-container {
@@ -196,12 +188,14 @@ blockquote{
         left: 0;
         width: 100%;
         height: 20%;
-        background: rgba(156, 78, 156, 0.8);
+        background: #5c6c5e;
         color: white;
         font-size: 14px;
         display: flex;
         justify-content: center;
         align-items: center;
+        opacity: 1 !important; /* SIEMPRE visible en mobile */
+        transition: none !important;
     }
 
     blockquote {

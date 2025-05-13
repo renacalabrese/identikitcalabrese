@@ -15,8 +15,7 @@
 .pixel-art {
     border-collapse: collapse;
     margin: 2rem auto;
-    border: 4px solid rgb(200, 150, 200);
-    box-shadow: 0 4px 10px rgb(188, 115, 188);
+    box-shadow: 0 4px 10px #5c6c5e;
     border-radius: 16px;
     overflow: hidden;
     width: auto; /* clave */

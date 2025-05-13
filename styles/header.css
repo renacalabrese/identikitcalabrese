@@ -1,5 +1,5 @@
 .header-container {
-    background-color: rgb(200, 150, 200);
+    background-color: #5c6c5e ;
     padding: 0.5rem 0;
     text-align: center;
     height: 100px;
@@ -7,7 +7,7 @@
 
 header h1 {
     font-family: 'Quicksand', sans-serif;
-    background-color: rgb(200, 150, 200);
+    background-color: #5c6c5e ;
     color: white;
     font-size: 22px;
     margin: 0;
@@ -42,12 +42,12 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 1px solid #880e4f;
+    border-bottom: 1px solid #374e3a;
     padding-bottom: 2px;
     transition: all 0.2s ease;
 }
 nav a.activo {
-    border-bottom: 3px solid #880e4f; /* o el mismo color que usás en hover */
+    border-bottom: 3px solid #374e3a; /* o el mismo color que usás en hover */
     color: white;
 }
 
@@ -81,6 +81,14 @@ nav a.activo {
 
     img {
         max-width: 100%;
+        height: auto;
+    }
+
+    .header-container {
+        background-color: #5c6c5e ;
+        padding: 0.5rem 0;
+        text-align: center;
+        height: 100px;
         height: auto;
     }
 
@@ -120,7 +128,7 @@ nav a.activo {
 
     #menu-mobile {
         flex-direction: column;
-        background-color: rgb(200, 150, 200);
+        background-color: #5c6c5e;
         position: fixed;
         top: 0;
         right: 0;
