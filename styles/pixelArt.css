@@ -65,8 +65,10 @@ body {
     }
 
     table {
-        display: block;
+        display: inline-block; /* mantiene proporción */
         overflow-x: auto;
-        width: 100%;
+        width: auto; /* no forzar a 100% */
+        max-width: 90vw; /* opcional: evita que se pase */
     }
+
 }
